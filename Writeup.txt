@@ -1,5 +1,20 @@
 Supplychain to control the authenticity of coffe beans,  from the farmer to the consumer.
 
+Test the code just run: npm test
+
+To run the app inside project6 folder: npm run dev
+
+Steps/workflow to execute the frontend app:
+
+The buttons 'Fetch data 1' and 'Fetch Data 2' uses the upc number given in the input, to get the info of the product. See the results in the console of the browser.
+
+The user can set the FarmerID address on Input, and then push the buttons in order: harvest, process, pack and ForSale. That address needs to be connected on metamask.
+
+After that, the Distributor can Buy and Ship, with the address on the input and connected to metamask.
+The retailer can Receive.
+And finally the Consumer can Purchase.
+
+
 Account:             0xbE2bcBdfE8592FBe58E39990aAc96483B7AF09fA
 Supply chain contract address:    0x2BbF0e297f9ECfA896b6750d6216Fc89558f02e1
 Supply chain transaction hash:    0x50a66c573982b7dfeae6d48546fe376c88f62e7b8aaff5652a637793fcdc8ea4

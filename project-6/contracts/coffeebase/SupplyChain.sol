@@ -245,6 +245,7 @@ contract SupplyChain is
     function buyItem(uint256 _upc)
         public
         payable
+        //onlyDistributor
         // Call modifier to check if upc has passed previous supply chain stage
         forSale(_upc)
         // Call modifer to check if buyer has paid enough
@@ -268,6 +269,7 @@ contract SupplyChain is
     // Use the above modifers to check if the item is sold
     function shipItem(uint256 _upc)
         public
+        // onlyDistributor
         // Call modifier to check if upc has passed previous supply chain stage
         sold(_upc)
         // Call modifier to verify caller of this function
@@ -283,6 +285,7 @@ contract SupplyChain is
     // Use the above modifiers to check if the item is shipped
     function receiveItem(uint256 _upc)
         public
+        // onlyRetailer
         // Call modifier to check if upc has passed previous supply chain stage
         shipped(_upc)
     // Access Control List enforced by calling Smart Contract / DApp
