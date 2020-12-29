@@ -347,8 +347,9 @@ console.log('La direccion del Farmer es: ' + $("#originFarmerID").val());
         ///    var processId = parseInt($(event.target).data('id'));
                             
             App.contracts.SupplyChain.deployed().then(function(instance) {
+                console.log('Cuenta propietario del contrato: ' + App.metamaskAccountID);
                 console.log('Se va a anyadir el distribuidor: ' + $("#distributorID").val());
-              return instance.addDistributor.call($("#distributorID").val());
+              return instance.addDistributor.call($("#distributorID").val(), {from: App.metamaskAccountID});
             }).then(function(result) {
              // $("#ftc-item").text(result);
               console.log('Distributor added:' + result);
